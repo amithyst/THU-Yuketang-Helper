@@ -40,7 +40,8 @@ class Lesson:
     def get_problems(self,presentationid):
         # 获取课程ppt中的题目
         data = self._get_ppt(presentationid)
-        return [problem["problem"] for problem in data["slides"] if "problem" in problem.keys()]
+        return [slide for slide in data["slides"] if "problem" in slide.keys()]
+        # return [problem["problem"] for problem in data["slides"] if "problem" in problem.keys()]
 
     def answer_questions(self,problemid,problemtype,answer,limit):
         # 回答问题
@@ -102,9 +103,32 @@ class Lesson:
                 presentations.append(current_presentation)
             for presentationid in presentations:
                 self.problems_ls.extend(self.get_problems(presentationid))
+
+            # -------- 你需要添加的代码在这里 --------
+            try:
+                # 定义一个文件名，用课程名和 lessonid 命名
+                filename = f"【习题金矿】_{self.lessonname}_{self.lessonid}.json"
+                
+                # 将整个 self.problems_ls 列表写入一个 json 文件
+                with open(filename, 'w', encoding='utf-8') as f:
+                    json.dump(self.problems_ls, f, ensure_ascii=False, indent=4)
+                
+                # 在UI上提示你
+                meg = f"{self.lessonname}: 找到 {len(self.problems_ls)} 个习题, 完整数据已导出到 {filename}"
+                self.add_message(meg, 0) 
+
+            except Exception as e:
+                meg = f"{self.lessonname} 习题导出失败: {e}"
+                self.add_message(meg, 4) 
+            # -------- 添加结束 --------
+                        
+            # (我们也保留原有的逻辑，以防万一)
             self.unlocked_problem = data["unlockedproblem"]
             for problemid in self.unlocked_problem:
-                self._current_problem(wsapp, problemid)
+                if problemid not in all_problem_ids: # 避免重复发送请求
+                    self._current_problem(wsapp, problemid)
+            # --- 修改结束 ---
+
         elif op == "unlockproblem":
             self.start_answer(data["problem"]["sid"],data["problem"]["limit"])
         elif op == "lessonfinished":
@@ -159,6 +183,36 @@ class Lesson:
         # 程序在上课中途运行，由_current_problem发送的已解锁题目数据，得到的返回值。
         # 此处需要筛选未到期的题目进行回答。
         elif op == "probleminfo":
+            
+            # --- 你需要添加的代码在这里 ---
+            # (检查是否存在详情字典，如果不存在则创建)
+            if not hasattr(self, 'full_problem_details'):
+                self.full_problem_details = {} 
+            
+            problem_id = data.get("problemid")
+            if problem_id:
+                # 把服务器返回的这份详细数据存入我们的字典
+                self.full_problem_details[problem_id] = data
+                
+                # (为了防止程序关闭丢失数据，我们每次收到新数据都重写一次文件)
+                try:
+                    # 定义一个新文件名
+                    filename = f"习题详情_{self.lessonname}_{self.lessonid}.json"
+                    
+                    # 把字典里所有的值 (也就是所有习题详情) 转换成列表并写入文件
+                    with open(filename, 'w', encoding='utf-8') as f:
+                        json.dump(list(self.full_problem_details.values()), f, ensure_ascii=False, indent=4)
+                    
+                    # 在UI上提示你，让你知道进度
+                    meg = f"{self.lessonname}: 已获取习题 {problem_id} 详情。总共 {len(self.full_problem_details)}/{len(self.problems_ls)}."
+                    self.add_message(meg, 0)
+                
+                except Exception as e:
+                    meg = f"{self.lessonname}: 保存习题 {problem_id} 详情失败: {e}"
+                    self.add_message(meg, 4) # 4 可能是错误颜色
+            # --- 添加结束 ---
+
+            # (下面是原脚本的自动答题逻辑，我们保留它)
             if data["limit"] != -1:
                 time_left = int(data["limit"]-(int(data["now"]) - int(data["dt"]))/1000)
             else:

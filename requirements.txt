@@ -18,6 +18,6 @@ pywin32-ctypes==0.2.3
 requests==2.27.1
 setuptools==75.1.0
 six==1.16.0
-urllib3==2.2.3
+# urllib3==2.2.3
 websocket-client==1.4.0
 wheel==0.44.0

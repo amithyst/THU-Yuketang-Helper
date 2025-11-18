@@ -1,0 +1,1 @@
+conda run -n yuketang_helper python C:\Github\Óê¿ÎÌÃ\THU-Yuketang-Helper\main.py

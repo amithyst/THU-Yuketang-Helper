@@ -1,0 +1,158 @@
+[
+    {
+        "id": "1556873311766951553",
+        "index": 34,
+        "cover": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305621381556873311766951553?e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:bhjMVRMTUwQC2MV27_92iL2a8CQ=",
+        "coverAlt": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305621381556873311766951553?imageView2/2/w/1280/format/webp&e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:k50PtPjr4SVC-zzkjoFBcS1-jyc=",
+        "thumbnail": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305621381556873311766951553?imageView2/2/w/640/format/jpg&e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:m0bKfH-AZGafxifRFWU4_8xmJj0=",
+        "shapes": [],
+        "note": "",
+        "problem": {
+            "problemId": "1556873311766951553",
+            "problemType": 1,
+            "body": "题目内容",
+            "score": 100,
+            "remark": "为保证模型容量和表达能力，Q、K、V分别使用不同的权重矩阵Wq、Wk和Wv，并且在多头注意力机制的输出侧还将使用第4个权重矩阵Wo。",
+            "answers": [],
+            "sendTime": 0,
+            "limit": 0,
+            "options": [
+                {
+                    "key": "A",
+                    "value": "A"
+                },
+                {
+                    "key": "B",
+                    "value": "B"
+                },
+                {
+                    "key": "C",
+                    "value": "C"
+                },
+                {
+                    "key": "D",
+                    "value": "D"
+                }
+            ],
+            "submit": {
+                "width": 121.5,
+                "height": 32.4,
+                "top": 489.375,
+                "left": 486.0
+            },
+            "bullets": [
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 224.4375,
+                    "label": "A",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 291.9375,
+                    "label": "B",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 359.4375,
+                    "label": "C",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 426.9375,
+                    "label": "D",
+                    "left": 87.75
+                }
+            ],
+            "remarkRich": {},
+            "hasRemark": true,
+            "version": 4,
+            "result": null
+        }
+    },
+    {
+        "id": "1556873311515293313",
+        "index": 66,
+        "cover": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305688861556873311515293313?e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:rKUMA1XWwlU0csuQ4Qd3rxcOyjc=",
+        "coverAlt": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305688861556873311515293313?imageView2/2/w/1280/format/webp&e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:joxn0E0tJYR6fnAVE885yFlde-o=",
+        "thumbnail": "https://thu-private-qn.yuketang.cn/slide/15853706/17634305688861556873311515293313?imageView2/2/w/640/format/jpg&e=1763460549&token=IAM-gs8ue1pDIGwtR1CR0Zjdagg7Q2tn5G_1BqTmhmqa:wo8P1CYbnN73LDGMVARHPQrEwuE=",
+        "shapes": [],
+        "note": "",
+        "problem": {
+            "problemId": "1556873311515293313",
+            "problemType": 1,
+            "body": "题目内容",
+            "score": 100,
+            "remark": "",
+            "answers": [],
+            "sendTime": 0,
+            "limit": 0,
+            "options": [
+                {
+                    "key": "A",
+                    "value": "A"
+                },
+                {
+                    "key": "B",
+                    "value": "B"
+                },
+                {
+                    "key": "C",
+                    "value": "C"
+                },
+                {
+                    "key": "D",
+                    "value": "D"
+                }
+            ],
+            "submit": {
+                "width": 121.5,
+                "height": 32.4,
+                "top": 489.375,
+                "left": 486.0
+            },
+            "bullets": [
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 224.4375,
+                    "label": "A",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 291.9375,
+                    "label": "B",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 359.4375,
+                    "label": "C",
+                    "left": 87.75
+                },
+                {
+                    "width": 40.5,
+                    "height": 40.5,
+                    "top": 426.9375,
+                    "label": "D",
+                    "left": 87.75
+                }
+            ],
+            "remarkRich": {},
+            "hasRemark": false,
+            "version": 4,
+            "result": [
+                "A"
+            ]
+        }
+    }
+]

@@ -13,3 +13,29 @@
 
 ### 使用程序
 &emsp;&emsp;已更新 Release v1.0.1，下载后双击打开即可使用！
+
+## 我的改进（爬取当前课程未发布的习题地址！）
+https://github.com/zhangchi2004/THU-Yuketang-Helper然后fork到自己
+```bash
+git remote -v
+#重命名原作者的仓库为 "upstream" (上游),这一步是为了保留与原作者的联系，万一原作者更新了代码，你以后还可以同步。
+git remote rename origin upstream
+git remote add origin https://github.com/amithyst/THU-Yuketang-Helper.git
+git remote -v
+```
+
+
+```bash
+git clone https://github.com/zhangchi2004/THU-Yuketang-Helper.git
+cd THU-Yuketang-Helper
+
+conda env list
+conda create -n yuketang_helper python=3.11
+conda activate yuketang_helper
+pip install -r requirements.txt
+
+python main.py
+
+tree /F > structrue.txt #windows
+conda deactivate
+```
