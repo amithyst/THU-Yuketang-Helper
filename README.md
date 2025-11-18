@@ -15,6 +15,16 @@
 &emsp;&emsp;已更新 Release v1.0.1，下载后双击打开即可使用！
 
 ## 我的改进（爬取当前课程未发布的习题地址！）
+
+### 思路
+得知可以爬取后按F12查看每个响应，找到响应，然后根据网上搜来的这个仓库丢给gemini分析API.
+
+![按F12爬取响应API来修改](images/按F12爬取响应API来修改.png)
+
+发现只要修改Scripts\Classes.py即可成功。
+
+![作出修改](images/修改.png)
+### 提交到仓库的流程
 https://github.com/zhangchi2004/THU-Yuketang-Helper然后fork到自己
 ```bash
 git remote -v
@@ -34,7 +44,7 @@ git branch
 git push -u origin main
 ```
 
-
+### 安装与使用
 ```bash
 git clone https://github.com/zhangchi2004/THU-Yuketang-Helper.git
 cd THU-Yuketang-Helper
