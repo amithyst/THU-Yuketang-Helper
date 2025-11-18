@@ -22,13 +22,23 @@ git remote -v
 git remote rename origin upstream
 git remote add origin https://github.com/amithyst/THU-Yuketang-Helper.git
 git remote -v
+
+
+# 1. 添加修改的文件 ( . 代表所有文件)
+git add .
+# 2. 提交修改信息
+git commit -m "修改了功能以爬取当前课程未发布的习题地址！" 
+# 目前分支是main
+git branch
+# 3. 推送到你自己的远程仓库
+git push -u origin main
 ```
 
 
 ```bash
 git clone https://github.com/zhangchi2004/THU-Yuketang-Helper.git
 cd THU-Yuketang-Helper
-
+# 可以不用conda造虚拟环境，只要你能装的上依赖就行（可能需要管理员权限）
 conda env list
 conda create -n yuketang_helper python=3.11
 conda activate yuketang_helper
@@ -39,3 +49,6 @@ python main.py
 tree /F > structrue.txt #windows
 conda deactivate
 ```
+
+python main.py（懒得编译成exe）启动后就会爬取当前正在上课的课程中所有题目部分的图片并存储在【习题金矿】中（当然其他帧也可以爬取，就是懒得设置）
+上课期间可以打开那些链接查看题目图片（当前课程结束就会失效！）
